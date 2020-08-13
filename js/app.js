@@ -20,7 +20,7 @@ const initialLoop = (arr, count = 0) => {
 };
 
 const loop = (arr, count = 0, time = 75) => {
-  location.hash = arr[(count + arr.length) % arr.length];
+  location.hash = arr[count % arr.length];
   timeoutId = setTimeout(loop.bind(this, arr, count + 1, time), time);
 };
 
